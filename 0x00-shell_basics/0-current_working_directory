@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "pwd"
+var_path=$PWD
