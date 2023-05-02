@@ -4,17 +4,17 @@
 # displays good luck for the 8th loop iteration
 # displays Best School for the other iterations
 
-countn=1
+countn=0
 string1="Best School"
 string2="bad luck"
 string3="good luck"
 
-while [ $countn -lt 11 ]
+while [ $countn -lt 10 ]
 do
-	if [ $countn -eq 4 ]
+	if [ $countn -eq 3 ]
 	then
 		echo $string2
-	elif [ $countn -eq 8 ]
+	elif [ $countn -eq 7 ]
 	then
 		echo $string3
 	else

@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 # This script prints "Best School" 10 times but prints "hi" after the 9th iteration
 
-countn=0
+countn=1
 string1="Best School"
-string2="HI"
+string2="Hi"
 
-while [ $countn -le 10 ]
+while [ $countn -lt 10 ]
 do
 if [ $countn -eq 9 ]
 then
 	echo $string2
-else
-	echo $string1
 fi
+	echo $string1
 
 ((countn = countn + 1))
 done
