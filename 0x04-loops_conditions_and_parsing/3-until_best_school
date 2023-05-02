@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # This scripts use until loop to print "Best School" 10 times
 
-counter=1
+countn=1
 string="Best School"
 
-until [ $counter -gt 10 ]
+until [ $countn -gt 10 ]
 do
 	echo $string
-	((counter++))
+	((countn = countn+1))
 done
