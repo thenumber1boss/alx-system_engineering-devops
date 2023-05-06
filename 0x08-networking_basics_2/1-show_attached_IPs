@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# script that displays all active IPv4 IPs on the machine it’s executed on.
+
+interfaces=$(ifconfig -a | sed 's/[ \t].*//;/^\(lo\|\)$/d')
+
+# Loop through interfaces and get their IP addresses
+for interface in $interfaces
+do
+    ip=$(ifconfig $interface | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1')
+    echo "$interface: $ip"
+done
